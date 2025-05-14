@@ -1,13 +1,13 @@
 <!-- Unit 13 Project
 Requirements
-[  ] Two Interactive Drop-down Inputs 
-[  ] Two Different jQuery Animation Methods 
-[  ] Add Five CSS Declarations
-[  ] Include Three Images
+[X] Two Interactive Drop-down Inputs 
+[X] Two Different jQuery Animation Methods 
+[X] Add Five CSS Declarations
+[X] Include Three Images
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Google Font
-[ no ] Feature 2 - Upload a Font
+[ yes ] Feature 2 - Upload a Font
 [ no ] Feature 3 - .mouseover() Method
 [ no ] Feature 4 - :hover Feature 
 [ no ] Feature 5 - Add an Additional Interactive Drop-down
@@ -17,70 +17,302 @@ Select ONE Additional Feature to Add
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Unit 13 Project</title>
+    <title>Stardew Valley Quiz</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <p id="score-show"></p>
+    
+    <h2>How much do you know about</h2>
+    <img
+      id="stardewLogo"
+      src="https://cdn.glitch.global/519c7556-8377-472e-b378-d10c65b04e26/Adobe%20Express%20-%20file%20(1).png?v=1746714543834"
+    />
+
     <hr />
-    <!-- Movie Question -->
-    <form id="movie-form">
+    <!-- Saloon Question -->
+    <form id="saloon-form">
       <label>
-        🎥 What is my favorite movie?
-        <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+        Who works at the Stardrop Saloon?
+        <select id="saloon-answer">
+          <option value="clint">Clint</option>
+          <option value="shane">Shane</option>
+          <option value="gus">Gus</option>
+          <option value="pam">Pam</option>
         </select>
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">Check Answer</button>
     </form>
-    <div id="movie-result"></div>
+    <div id="saloon-result">
+      <span id="saloon-text"></span>
+      <img id="saloon-img" class="result-image" style="display: none"
+           src="https://cdn.glitch.global/519c7556-8377-472e-b378-d10c65b04e26/Screenshot%202025-05-13%20at%209.40.14%20AM.png?v=1747143619939"> 
+    </div>
     <hr />
-    <!-- Book Question -->
-    <form id="book-form">
+
+    <!-- Grandpa Visit Question -->
+    <form id="grandpa-form">
       <label>
-        📖 What is my favorite book?
-        <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+        In which year does the ghost of your grandpa visit you?
+        <select id="grandpa-answer">
+          <option value="year1">Year 1</option>
+          <option value="year2">Year 2</option>
+          <option value="year3">Year 3</option>
+          <option value="year4">Year 4</option>
         </select>
       </label>
-      <button type="submit">Check Book Answer</button>
+      <button type="submit">Check Answer</button>
     </form>
-    <div id="book-result"></div>
+    <div id="grandpa-result">
+      <span id="grandpa-text"></span>
+    <img id="grandpa-img" class="result-image" style="display: none"
+           src="https://cdn.glitch.global/519c7556-8377-472e-b378-d10c65b04e26/Screenshot%202025-05-13%20at%209.42.56%20AM.png?v=1747143782829"> 
+    </div>
+
+    <hr />
+    <!-- Romance Question -->
+    <form id="romance-form">
+      <label>
+        Which of the following townies CAN'T you romance?
+        <select id="romance-answer">
+          <option value="elliot">Elliot</option>
+          <option value="harvey">Harvey</option>
+          <option value="shane">Shane</option>
+          <option value="robin">Robin</option>
+        </select>
+      </label>
+      <button type="submit">Check Answer</button>
+    </form>
+    <div id="romance-result">
+      <span id="romance-text"></span>
+    <img id="romance-img" class="result-image" style="display: none"
+           src="https://cdn.glitch.global/519c7556-8377-472e-b378-d10c65b04e26/Screenshot%202025-05-13%20at%209.44.19%20AM.png?v=1747143863366"> 
+    </div>
+    <hr />
+    
+    <!-- Vincent Question -->
+    <form id="vincent-form">
+      <label>
+        What's the name of Sam's little brother?
+        <select id="vincent-answer">
+          <option value="oliver">Oliver</option>
+          <option value="vincent">Vincent</option>
+          <option value="liam">Liam</option>
+          <option value="henry">Henry</option>
+        </select>
+      </label>
+      <button type="submit">Check Answer</button>
+    </form>
+    <div id="vincent-result">
+      <span id="vincent-text"></span>
+    <img id="vincent-img" class="result-image" style="display: none"
+           src="https://cdn.glitch.global/519c7556-8377-472e-b378-d10c65b04e26/Screenshot%202025-05-14%20at%209.49.07%20AM.png?v=1747230552950"> 
+    </div>
+    <hr />
+    
+    <!-- Krobus Question -->
+    <form id="krobus-form">
+      <label>
+        What's the name of the creature in the sewer?
+        <select id="krobus-answer">
+          <option value="krobus">Krobus</option>
+          <option value="noname">It doesnt have a name</option>
+          <option value="robbie">Robbie</option>
+          <option value="brutos">Brutos</option>
+        </select>
+      </label>
+      <button type="submit">Check Answer</button>
+    </form>
+    <div id="krobus-result">
+      <span id="krobus-text"></span>
+    <img id="krobus-img" class="result-image" style="display: none"
+           src="https://cdn.glitch.global/519c7556-8377-472e-b378-d10c65b04e26/Screenshot%202025-05-14%20at%2010.04.50%20AM.png?v=1747231494333"> 
+    </div>
+    <hr />
+
+    <p id="end-p">
+      Check your score on the top of the page! 
+    </p>
+    <!-- Legendary Fish Question -->
+<!--     <form id="legendaryFish-form">
+      <label>
+        How many legendary fish can you get in Stardew Valley?
+        <select id="legendaryFish-answer">
+          <option value="5fish">5</option>
+          <option value="7fish">7</option>
+          <option value="4fish">4</option>
+          <option value="8fish">8</option>
+        </select>
+      </label>
+      <button type="submit">Check Answer</button>
+    </form>
+    <div id="legendaryFish-result">
+      <span id="fish-text"></span>
+    </div>
+    <hr /> -->
+    
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-      //Movie Question jQuery Code
-      $("#movie-form").on("submit", function (event) {
+      var userScore = 0;
+
+      //Saloon Question jQuery Code
+      var saloonChoice = 0;
+
+      $("#saloon-form").on("submit", function (event) {
         event.preventDefault();
-
-        var $answer = $("#movie-answer");
+    
+        var $answer = $("#saloon-answer");
         var answer = $answer.val();
-
-        if (answer === "movie1") {
-          $("#movie-result").text("YESSSS!");
+        
+        var $saloonpic = $("#saloon-img");
+        $saloonpic.hide();
+        
+        if (answer === "gus" && saloonChoice === 0) {
+          $("#saloon-text").text("YESSSS! It's Gus and his notorious giant omelette quest!");
+          userScore = userScore + 1;
+          saloonChoice = 1;
+          $saloonpic.fadeIn(1000);
+        } else if (saloonChoice === 0) {
+          $("#saloon-text").text("Nope, they are there a lot, but as a customer!");
+          saloonChoice = 1;
         } else {
-          $("#movie-result").text("Try Again!");
+          alert("You already answered this question!");
         }
+        $("#score-show").text("Your score is " + userScore);
       });
 
-      //Book Question jQuery Code
-      $("#book-form").on("submit", function (event) {
+      //Grandpa Question jQuery Code
+      var grandpaChoice = 0;
+
+      $("#grandpa-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#book-answer");
+        var $answer = $("#grandpa-answer");
         var answer = $answer.val();
+        
+        var $grandpapic = $("#grandpa-img");
+        $grandpapic.hide();
 
-        if (answer === "book1") {
-          $("#book-result").text("YESSSS!");
+        if (answer === "year3" && grandpaChoice === 0) {
+          $("#grandpa-text").text("Yep, granpa visits on the first day of Spring, year 3!");
+          userScore = userScore + 1;
+          grandpaChoice = 1;
+          $grandpapic.fadeIn(1000);
+        } else if (grandpaChoice === 0) {
+          $("#grandpa-text").text("Nooooo, boooo you suck!");
+          grandpaChoice = 1;
         } else {
-          $("#book-result").text("Try Again!");
+          alert("You already answered this question!");
         }
+        $("#score-show").text("Your score is " + userScore);
       });
+
+      //Romance Question jQuery Code
+      var romanceChoice = 0;
+
+      $("#romance-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#romance-answer");
+        var answer = $answer.val();
+        
+        var $romancepic = $("#romance-img");
+
+        if (answer === "robin" && romanceChoice === 0) {
+          $("#romance-text").text(
+            "Sadly, you're right... Damn you Demetrius!!!"
+          );
+          userScore = userScore + 1;
+          romanceChoice = 1;
+          $romancepic.fadeIn(1000);
+        } else if (romanceChoice === 0) {
+          $("#romance-text").text("Not that one!");
+          romanceChoice = 1;
+        } else {
+          alert("You already answered this question!");
+        }
+        $("#score-show").text("Your score is " + userScore);
+      });
+
+      //Vincent Question jQuery Code
+      var vincentChoice = 0;
+
+      $("#vincent-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#vincent-answer");
+        var answer = $answer.val();
+        
+        var $vincentpic = $("#vincent-img");
+
+        if (answer === "vincent" && vincentChoice === 0) {
+          $("#vincent-text").text(
+            "Yes, it's Vincent!"
+          );
+          userScore = userScore + 1;
+          vincentChoice = 1;
+          $vincentpic.show(1000);
+        } else if (vincentChoice === 0) {
+          $("#vincent-text").text("Not that one!");
+          vincentChoice = 1;
+        } else {
+          alert("You already answered this question!");
+        }
+        $("#score-show").text("Your score is " + userScore);
+      });
+      
+      //Krobus Question jQuery Code
+      var krobusChoice = 0;
+
+      $("#krobus-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#krobus-answer");
+        var answer = $answer.val();
+        
+        var $krobuspic = $("#krobus-img");
+
+        if (answer === "krobus" && krobusChoice === 0) {
+          $("#krobus-text").text(
+            "Yes, Krobus my fav lil guy!"
+          );
+          userScore = userScore + 1;
+          krobusChoice = 1;
+          $krobuspic.fadeIn(1000);
+        } else if (krobusChoice === 0) {
+          $("#krobus-text").text("Not that one!");
+          krobusChoice = 1;
+        } else {
+          alert("You already answered this question!");
+        }
+        $("#score-show").text("Your score is " + userScore);
+      });
+
+      
+      
+      
+//       //legendary Fish Question jQuery Code
+//       var fishChoice = 0;
+
+//       $("#legendaryFish-form").on("submit", function (event) {
+//         event.preventDefault();
+
+//         var $answer = $("#legendaryFish-answer");
+//         var answer = $answer.val();
+
+//         if (answer === "5fish" && fishChoice === 0) {
+//           $("#fish-text").text("YESSSS!");
+//           userScore = userScore + 1;
+//           fishChoice = 1;
+//         } else if (fishChoice === 0) {
+//           $("#lfish-text").text("Try Again!");
+//           fishChoice = 1;
+//         } else {
+//           alert("You already answered this question!");
+//         }
+//         $("#score-show").text("Your score is " + userScore);
+//       });
     </script>
   </body>
 

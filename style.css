@@ -1,19 +1,141 @@
-#movie-result {
-  background: rgb(244, 98, 181);
-  border: 5px solid black;
-  font-size: 24px;
-  height: 160px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+@font-face {
+        font-family: stardewTitle;
+        src: url("https://cdn.glitch.global/519c7556-8377-472e-b378-d10c65b04e26/Stardew%20Valley%20ALL%20CAPS.ttf?v=1746712545020")
+      }
+
+@font-face {
+        font-family: stardewText;
+        src: url("https://cdn.glitch.global/519c7556-8377-472e-b378-d10c65b04e26/Stardew_Valley.ttf?v=1746713293639")
+      }
+
+
+body {
+  background-image: url("https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/01/stardew-valley-title-screen-mountains-birds.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: stardewText;
+  font-size: 2em;
+  color: #56160c;
 }
 
-#book-result {
-  background: rgb(196, 159, 255);
-  border: 5px solid black;
-  font-size: 24px;
+h2 {
+  text-align: center;
+}
+
+#stardewLogo {
+  width: 400px;
+  display: block;
+  margin: auto;
+}
+
+.result-photo {
+  justify-content: center;
+  width: 170px;
+  height: 160px;
+  background: #d68036;
+  
+}
+
+#saloon-result {
+  padding: 8px;
+  background: #fac06f;
+  border: 5px solid #873706;
+  font-size: 38px;
   height: 160px;
   margin-top: 10px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0;
+  width: 400px;
+}
+
+#grandpa-result {
+  padding: 8px;
+  background: #fac06f;
+  border: 5px solid #873706;
+  font-size: 38px;
+  height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0;
+  width: 400px;
+}
+
+#romance-result {
+  padding: 8px;
+  background: #fac06f;
+  border: 5px solid #873706;
+  font-size: 38px;
+  height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0;
+  width: 400px;
+}
+
+#vincent-result {
+  padding: 8px;
+  background: #fac06f;
+  border: 5px solid #873706;
+  font-size: 38px;
+  height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0;
+  width: 400px;
+}
+
+#krobus-result {
+  padding: 8px;
+  background: #fac06f;
+  border: 5px solid #873706;
+  font-size: 38px;
+  height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0;
+  width: 400px;
+}
+
+#legendaryFish-result {
+  padding: 8px;
+  background: #fac06f;
+  border: 5px solid #873706;
+  font-size: 38px;
+  height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0;
+  width: 400px;
+}
+
+.result-image {
+  height: 160px;
+}
+
+#end-p {
+  color: white;
+  text-align: center;
+}
+
+#score-show {
+  margin-top: 50px;
+}
+
+span {
+  font-size: 30px;
 }
 
 hr {
